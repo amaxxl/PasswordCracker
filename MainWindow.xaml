@@ -1,0 +1,68 @@
+﻿<Window x:Class="PasswordCracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Password Cracker" Height="400" Width="600">
+    <Grid Background="#F0F0F0">
+        <StackPanel Margin="20">
+            <TextBlock Text="Enter password to encrypt" 
+                       Foreground="Gray"
+                       Margin="0 0 0 5"/>
+
+            <TextBox Name="PasswordTextBox" 
+                     Width="200" 
+                     Margin="0 0 0 5"
+                     Padding="5"
+                     BorderThickness="1"
+                     BorderBrush="#CCCCCC"
+                     Background="White"/>
+
+            <Button Name="EncryptButton" 
+                    Width="200" 
+                    Margin="0 0 0 5" 
+                    Content="Encrypt" 
+                    Background="#007ACC"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Padding="10"
+                    Click="EncryptButton_Click"/>
+
+            <Button Name="BruteForceButton" 
+                    Width="200" 
+                    Margin="0 0 0 5" 
+                    Content="Brute Force Attack" 
+                    Background="#DC3545"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Padding="10"
+                    Click="BruteForceButton_Click"/>
+
+            <TextBlock Text="Encrypted Password" 
+                       Foreground="Gray"
+                       Margin="0 20 0 5"/>
+
+            <TextBox Name="ResultTextBox" 
+                     Width="200" 
+                     Margin="0 0 0 5"
+                     Padding="5"
+                     BorderThickness="1"
+                     BorderBrush="#CCCCCC"
+                     Background="White"
+                     IsReadOnly="True"/>
+
+            <TextBlock Name="TimeTextBlock" 
+                       Margin="0 20 0 5"/>
+
+            <TextBlock Name="StatusTextBlock" 
+                       Margin="0 20 0 5"/>
+
+            <ProgressBar Name="ProgressBar" 
+                         Width="200" 
+                         Height="20" 
+                         Margin="0 20 0 5"
+                         Background="#E0E0E0"
+                         Foreground="#007ACC"/>
+
+            <ScrollBar/>
+        </StackPanel>
+    </Grid>
+</Window>
